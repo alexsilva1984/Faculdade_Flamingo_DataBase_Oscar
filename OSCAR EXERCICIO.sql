@@ -89,7 +89,10 @@ RESPOSTA: EM 1928
 
 
 -- 14 - Pensando no ano em que você nasceu: Qual foi o Oscar de melhor filme, Melhor Atriz e Melhor Diretor?
-SELECT year_ceremony, category, film, name from movies where category in ('BEST PICTURE','ACTRESS','DIRECTING') and year_ceremony ='1999' and winner like '1';
+SELECT year_ceremony, category, film, name from movies where category in ('BEST PICTURE','ACTRESS','DIRECTING') and year_ceremony ='1984' and winner like '1';
+RESPOSTA: Na minha data de nascimento não teve essa categoria
+
+
 -- 15 Agora procure 7 atrizes que não sejam americanas, europeias ou brasileiras.  Vamos cadastrá-los no nosso banco, mas eles ainda não ganharam o Oscar. Só foram nomeados.
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('1991', '1992', '64', 'ACTRESS', 'Gong Li', 'Raise the Red Lantern', '0');
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2000', '2001', '73', 'ACTRESS', 'Zhang Ziyi', 'Crouching Tiger, Hidden Dragon', '0');
@@ -99,8 +102,21 @@ INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, 
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2006', '2007', '79', 'ACTRESS', 'Marion Cotillard', 'La Vie en Rose', '0');
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2006', '2007', '79', 'ACTRESS', 'Tilda Swinton', 'Michael Clayton', '0');
 RESPOSTA: 
-    
+1	1927	1928	1	ACTOR	Richard Barthelmess	The Noose	False
+2	1927	1928	1	ACTOR	Emil Jannings	The Last Command	True
+3	1927	1928	1	ACTRESS	Louise Dresser	A Ship Comes In	False
+4	1927	1928	1	ACTRESS	Janet Gaynor	7th Heaven	True
+5	1927	1928	1	ACTRESS	Gloria Swanson	Sadie Thompson	False
+6	1927	1928	1	ART DIRECTION	Rochus Gliese	Sunrise	False
+7	1927	1928	1	ART DIRECTION	William Cameron Menzies	The Dove;	True
 
+    
 -- 16- Agora vamos falar da sua vida. Me diga o nome de uma pessoa que você admira e o que ela fez na sua vida. Agora me diz: Quê prêmio essa pessoa merece? 
--- meu pai que me deu todo apoio confiança em todos momentos que foi preciso e cada passo dado.
-INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2022', '2023', '94', 'BEST DAD', 'José Da Purificação Oliveira', 'O Pai Do Ano', '0');
+-- meu pai e minha mãe que me deram todo apoio confiança em todos momentos que foi preciso e cada passo dado.
+INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2022', '2023', '94', 'BEST DAD', 'Paulo Rodrigues da Silva', 'O Pai Do Ano', '1');
+INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2022', '2023', '94', 'MOTHER OF THE YEAR', 'Rozinete Maria do Nascimento', 'A Mãe do Ano', '1');
+
+RESPOSTA: 
+10397	2022	2023	94	BEST DAD	Paulo Rodrigues da Silva	O Pai Do Ano	1
+10398	2022	2023	94	MOTHER OF THE YEAR	Rozinete Maria do Nascimento	A Mãe do Ano	1
+
