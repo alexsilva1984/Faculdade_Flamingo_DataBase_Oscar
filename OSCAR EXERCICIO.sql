@@ -90,7 +90,10 @@ RESPOSTA: EM 1928
 
 -- 14 - Pensando no ano em que você nasceu: Qual foi o Oscar de melhor filme, Melhor Atriz e Melhor Diretor?
 SELECT year_ceremony, category, film, name from movies where category in ('BEST PICTURE','ACTRESS','DIRECTING') and year_ceremony ='1984' and winner like '1';
-RESPOSTA: Na minha data de nascimento não teve essa categoria
+RESPOSTA: 2 indicações
+    
+1984	DIRECTING	Terms of Endearment	James L. Brooks
+1984	BEST PICTURE	Terms of Endearment	James L. Brooks, Producer    
 
 
 -- 15 Agora procure 7 atrizes que não sejam americanas, europeias ou brasileiras.  Vamos cadastrá-los no nosso banco, mas eles ainda não ganharam o Oscar. Só foram nomeados.
